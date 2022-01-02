@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-US>
+  <head>
+    <meta charset="utf-8">
+    <title>My test page</title>
+	<meta name="author" content="Winifred">
+    <meta name="description" content="My first test page for learning">
+	
+	<meta property="og:image" content="http://psychtoons.weebly.com/uploads/5/3/2/7/53276877/1104538.png?394"> 	<!-- Open Graph (OG) Data is a metadata protocol that Facebook invented to provide richer metadata for website -->
+    <meta property="og:description" content="This is a test page about Pooh for learning.">
+    <meta property="og:title" content="Winne The Pooh">
+	
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon"> 	<!-- <p> Small logo on the LHS of browser's tab</p> -->
+	
+	<link href="styles/style.css" rel="stylesheet"> 
+	
+	<!-- External JavaScript -->
+	<script src="scripts/main.js" defer></script> 	<!-- Script element include src attribute and defer instructs browser to load the JavaScript after the page has finished parsing the HTML -->
+	
+	<!-- Internal JavaScript-->
+	<script>
+		<!-- DOMContentLoaded event fires when initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading-->
+		<!-- target.addEventListener(type, listener) --> type = event type to listen to ; listener = object that receives notification when an event of specified type occurs -->
+		 document.addEventListener("DOMContentLoaded", function() { 
+		  function createParagraph() {
+			let para = document.createElement('p'); // Create new paragraph ('p') when button is clicked
+			para.textContent = 'You clicked the button!';  // Text that shows up after clicking the button
+			document.body.appendChild(para);
+		  }
+
+		  const buttons = document.querySelectorAll('clickme_button');
+		
+		/*
+		for (statement 1; statement 2; steatement 3)
+			Statement 1 is executed (one time) before the execution of the code block.
+			Statement 2 defines the condition for executing the code block.
+			Statement 3 is executed (every time) after the code block has been executed.
+		*/
+		
+		  for(let i = 0; i < buttons.length ; i++) {
+			buttons[i].addEventListener('click', createParagraph);
+		  }
+		});
+		
+	</script>
+	
+  </head>
+  
+  <body>
+  
+    <h1>&lt; ~ &gt; My First HTML &lt; ~ &gt;</h1>
+    <h2>Testing page by <strong>Winifred</strong></h2>
+	
+	<img src="images/favicon.ico" alt="My test image">   <!-- To insert image in page -->
+	
+	<h3>About Pooh...</h3>
+    <p>Pooh's friends:</p>
+	<ul>
+		<li>Piglet</li>
+			<ul>
+				<li> The Pig </li>
+			</ul>
+		<li>Tigger</li>
+			<ul>
+				<li> The Tiger </li>
+			</ul>
+		<li>Eeyore</li>
+			<ul>
+				<li> The Donkey </li>
+			</ul>
+	</ul>
+	
+    <p>Pooh's favourite food:</p>
+	<ol>
+		<li>Honey</li>
+		<li>Honey</li>
+		<li>Honey</li>
+	</ol>
+
+	<p> For more information about Pooh: <a href="https://en.wikipedia.org/wiki/Winnie-the-Pooh">Pooh Wiki</a></p>
+
+	<username> Your name is: ? </username>
+	<br><br>
+	<clickme_button>Click me</clickme_button>
+	
+	<script src="scripts/main.js"></script>
+  </body>
+</html>

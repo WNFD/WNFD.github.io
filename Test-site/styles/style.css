@@ -1,0 +1,81 @@
+html {
+  /* To add a layer of background with linear gradient over the image to create the opaque feel*/	
+  background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://wallpapercave.com/wp/wp2722858.jpg");
+  background-repeat: no-repeat;
+  background-color: #cccccc;  /* Default background colour - Grey */
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  font-family: 'Righteous', cursive; /* Obtain font from: https://fonts.google.com/ */
+}
+
+/* Anatomy of CSS ruleset
+p -> selector (HTML element name at start of ruleset which defines the element(s) to be styled) 
+color -> property
+red -> property value
+color: red; -> declaration */
+
+p {
+  color: purple;   
+}
+
+h1, h2 {
+	text-align: center;
+}
+
+h2, h3 {
+  color: red;
+}
+
+username {
+  font-family: 'helvetica neue', helvetica, sans-serif;
+  letter-spacing: 1px;
+  /* text-transform: uppercase; */
+  text-align: center;
+  border: 2px solid rgba(0,0,200,0.6);
+  background: white;
+  color: rgba(0,0,200,0.6);
+  box-shadow: 1px 1px 2px rgba(0,0,200,0.4);
+  border-radius: 10px;
+  padding: 3px 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* Setting declaration for the <body> element */
+
+body {
+  width: 600px;  /* Forces body o be 600 pixels wide */
+  margin: 0 auto; /* The first value affects the element's top and bottom side; the second value affects the left and right side. Auto is a special value that divides the available horizontal space evenly between left and right */
+  background-color: #FF9500; /* Set the element's background colour */
+  padding: 0 20px 20px 20px; /* The goal is to put some space around the content. The values set top, right, bottom, left, in that order. */
+  border: 5px solid black; /* Sets values for the width, style and color of the border */
+}
+
+clickme_button {
+    border: 0;
+    line-height: 2.5;
+    padding: 0 20px;
+    font-size: 1rem;
+    text-align: center;
+    color: #fff;
+    text-shadow: 1px 1px 1px #000;
+    border-radius: 10px;
+    background-color: rgba(220, 0, 0, 1);
+    background-image: linear-gradient(to top left,
+                                      rgba(0, 0, 0, .2),
+                                      rgba(0, 0, 0, .2) 30%,
+                                      rgba(0, 0, 0, 0));
+    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
+                inset -2px -2px 3px rgba(0, 0, 0, .6);
+}
+
+clickme_button:hover {
+    background-color: rgba(255, 0, 0, 1);
+}
+
+/*
+clickme_button:active {
+    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
+                inset 2px 2px 3px rgba(0, 0, 0, .6);
+}*/
